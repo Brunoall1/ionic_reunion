@@ -12,9 +12,11 @@ import{
   styleUrls: ['./reg.page.scss'],
 })
 export class RegPage implements OnInit {
+  formularioRegistro: FormGroup;
 
-  constructor(public fb: FormBuilder){
-    this.formularioLogin = this.fb.group({
+  constructor(public fr: FormBuilder){
+
+    this.formularioRegistro = this.fr.group({
       'nombre': new FormControl("",Validators.required),
       'clave': new FormControl("",Validators.required),
       'confirmacionclave': new FormControl("",Validators.required)
