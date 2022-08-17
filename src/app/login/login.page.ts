@@ -30,7 +30,7 @@ export class LoginPage implements OnInit {
     const headers = { 'content-type': 'application/json'};
     this.http.post('http://localhost:10000/login',JSON.stringify(usuario),{'headers':headers}).subscribe(function(data) {
       console.log(data);
-      if(data == 'true'){
+      if(data === 'true'){
         console.log('ingresado');
 
       }else{
